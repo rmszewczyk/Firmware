@@ -2012,7 +2012,6 @@ S3(ext)=9
   #define DIGIPOTSS_PIN 38
   #define DIGIPOT_CHANNELS {4,5,3,0,1} // X Y Z E0 E1 digipot channels to stepper driver mapping
   #define ORIG_PS_ON_PIN     -1
-  #define PS_ON_PIN          -1
   #define ORIG_SDCARDDETECT 	    81
   #define STEPPER_CURRENT_CONTROL CURRENT_CONTROL_DIGIPOT
 #endif //RAMBo/MiniRambo option
@@ -2323,4 +2322,3 @@ S3(ext)=9
         ORIG_Z_DIR_PIN, ORIG_Z_ENABLE_PIN, ORIG_Z_MIN_PIN, ORIG_Z_MAX_PIN, LED_PIN, ORIG_PS_ON_PIN, \
         HEATER_0_PIN, HEATER_BED_PIN, /*ORIG_FAN_PIN,*/ E0_PINS E1_PINS E2_PINS TEMP_0_PIN, TEMP_BED_PIN,SDSS }
 #endif
-

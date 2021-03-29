@@ -7,12 +7,12 @@ Rostock MAX v3   = 5
 Hacker H2        = 6
 */
 // ### Define your Printer Model here! ###
-#define PRINTER 5
+#define PRINTER 2
 
 // SeeMeCNC Bowden w/PEEK barrel = 1
 // HE240 on ERIS w/accel probe   = 2
 // HE280 w/accel probe           = 3
-#define HOTEND 3
+#define HOTEND 1
 
 // ### Define your motherboard here! ###
 // 301 = RAMBo    302 = MINI RAMBo
@@ -79,8 +79,8 @@ Hacker H2        = 6
 // ### Hotend and Extruder configuration
 #define MIN_EXTRUDER_TEMP 150
 #if HOTEND == 1
-#define MAXTEMP 240
-#define UI_SET_MAX_EXTRUDER_TEMP 240
+#define MAXTEMP 300
+#define UI_SET_MAX_EXTRUDER_TEMP 300
 #define EXT0_PID_INTEGRAL_DRIVE_MAX 180
 #define EXT0_PID_INTEGRAL_DRIVE_MIN 80
 #define EXT0_PID_PGAIN_OR_DEAD_TIME 14.50
@@ -131,7 +131,7 @@ Hacker H2        = 6
 // ### EXT0 Setup ###
 #define EXT0_X_OFFSET 0
 #define EXT0_Y_OFFSET 0
-#define EXT0_STEPS_PER_MM 92.4
+#define EXT0_STEPS_PER_MM 584
 #define EXT0_TEMPSENSOR_TYPE 97 //97
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
@@ -229,7 +229,7 @@ Hacker H2        = 6
 #define HAVE_HEATED_BED 1
 #define INVERT_X_DIR 1
 #if POWER_SUPPLY == 2
-#define INVERT_Y_DIR 1
+#define INVERT_Y_DIR 0
 #else
 #define INVERT_Y_DIR 0
 #endif
@@ -300,15 +300,15 @@ Hacker H2        = 6
 #define MOTOR_CURRENT {140,140,140,130,130}
 #endif
 #define HAVE_HEATED_BED 1
-#define INVERT_X_DIR 1
+#define INVERT_X_DIR 0
 #define INVERT_Y_DIR 0
-#define INVERT_Z_DIR 1
-#define DELTA_DIAGONAL_ROD 291.06  // ball cup arms
-#define DELTA_MAX_RADIUS 145.0
-#define PRINTER_RADIUS 200.0
+#define INVERT_Z_DIR 0
+#define DELTA_DIAGONAL_ROD 269.0  // Older u joint
+#define PRINTER_RADIUS 198.25  // v1 machine
+#define DELTA_MAX_RADIUS (PRINTER_RADIUS-END_EFFECTOR_HORIZONTAL_OFFSET-CARRIAGE_HORIZONTAL_OFFSET)
 #define Z_MAX_LENGTH 350
-#define END_EFFECTOR_HORIZONTAL_OFFSET 30.22
-#define CARRIAGE_HORIZONTAL_OFFSET 26.5  // molded cheapskates
+#define END_EFFECTOR_HORIZONTAL_OFFSET 33.0 // 1/8"axle & u joint platform
+#define CARRIAGE_HORIZONTAL_OFFSET 38.4  // lasercut melamine trucks with 608zz bearings
 #define DELTASEGMENTS_PER_PRINTLINE 22
 #define STEPPER_INACTIVE_TIME 600L
 #define MAX_INACTIVE_TIME 900L
@@ -356,7 +356,7 @@ Hacker H2        = 6
 #define SDCARDDETECT 81
 #define SDCARDDETECTINVERTED 0
 #define FEATURE_CONTROLLER 13
-#define UI_PRINTER_NAME "RostockMAXv2"
+#define UI_PRINTER_NAME "RostockMAXv1"
 
 
 #elif PRINTER == 3  // ERIS Delta

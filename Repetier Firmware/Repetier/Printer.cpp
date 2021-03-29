@@ -862,6 +862,9 @@ void Printer::setup()
     for(uint8_t i = 0; i < E_AXIS_ARRAY; i++)
     {
         currentPositionSteps[i] = 0;
+    }
+    for(uint8_t i=0; i< 3; i++)
+    {
         currentPosition[i] = 0.0;
     }
 //setAutolevelActive(false); // fixme delete me
